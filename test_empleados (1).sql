@@ -1,0 +1,231 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 11-09-2023 a las 17:08:42
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `test_empleados`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleados`
+--
+
+CREATE TABLE `empleados` (
+  `codigo` varchar(10) NOT NULL,
+  `nombres` varchar(250) NOT NULL,
+  `apellidos` varchar(250) NOT NULL,
+  `cargo` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `tel_personal` varchar(15) NOT NULL,
+  `puesto` varchar(100) NOT NULL,
+  `estado` int(11) NOT NULL,
+  `ext` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`codigo`, `nombres`, `apellidos`, `cargo`, `email`, `tel_personal`, `puesto`, `estado`, `ext`) VALUES
+('0', 'MIGUEL ANGEL', 'CHAVARRIA RAMIREZ', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5585202083', 'Activo', 1, 0),
+('0000', 'FERNANDO ', 'NUÑEZ ABREGO', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('1', 'DANEYRA YANET', 'CANELA TAPIA', 'ANALISTA DE GESTIÓN', 'miguel.luna@bacrocorp.com', '7221733297', 'Activo', 0, 0),
+('11', 'FERNANDO ', 'GUERRERO CHAVEZ', 'INGENIERO DE SERVICIO', 'fernando.guerrero@bacrocorp.com', '0', 'Activo', 0, 0),
+('112', 'MIRIAM ', 'CIENEGA JASSO', 'ANALISTA DE PRE-NOMINA', 'miriam.cienega@bacrocorp.com', '7222313088', 'Activo', 0, 1123),
+('121', 'CONCEPCION ELIZABETH', 'FABELA QUINTERO', 'COORDINADOR DE CONTABILIDAD', 'concepcion.fabela@bacrocorp.com', '7226278075', 'Activo', 0, 1132),
+('122', 'EDUARDO ', 'RAMIREZ MALVAEZ', 'COORDINADOR DE SERVICIOS GENERALES', 'eduardo.ramirez@bacrocorp.com', '7223068738', 'Activo', 0, 1134),
+('123', 'RODOLFO ALBERTO', 'GONZALEZ JIMENEZ', 'TÉCNICO DE ELEVADORES', 'rodolfo.gonzalez@bacrocorp.com', '5533784794', 'Activo', 0, 0),
+('12345', 'Ariel', 'Antonio Sánchez', 'Consultor JR', 'ariel.sanchez@bacrocorp.com', '7293682940', 'Consultor', 2, 1136),
+('123456', 'Alfredo', 'Rosales Ramirez', 'Consultor JR', 'alfredo.ramirez@bacrocorp.com', '1234567890', 'Activo', 2, 1136),
+('135', 'MARTIN SANTOS', 'SAAVEDRA PEREZ', 'ANALISTA DE OPERACIONES', 'martin.saavedra@bacrocorp.com', '7225456875', 'Activo', 2, 1145),
+('143', 'FRANCISCO ', 'GONZALEZ HERRERA', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('16', 'GUILLERMO ', 'PEÑA ADAME', 'INGENIERO DE SERVICIO', 'guillermo.pena@bacrocorp.com', '7224630466', 'Activo', 0, 0),
+('18', 'EDGAR ', 'GUTIERREZ ESQUIVEL', 'ANALISTA DE GESTIÓN', 'edgar.gutierrez@bacrocorp.com', '5553300237', 'Activo', 0, 0),
+('180', 'EDGAR ', 'SOTO ARTEAGA', 'TÉCNICO DE ELEVADORES', 'edgar.soto@bacrocorp.com', '7291375491', 'Activo', 0, 0),
+('204', 'JAZMIN ', 'AVILES AGUIRRE', 'ANALISTA DE COTIZACIONES', 'jazmin.aviles@bacrocorp.com', '7226424943', 'Activo', 0, 1143),
+('205', 'DANIELA ', 'ALVAREZ REYES', 'ANALISTA DE OPERACIONES', 'daniela.alvarez@bacrocorp.com', '7224512530', 'Activo', 0, 1140),
+('206', 'MARISOL ', 'BERNAL JUAREZ', 'ANALISTA DE OPERACIONES', 'marisol.bernal@bacrocorp.com', '7224693651', 'Activo', 0, 1143),
+('21', 'MARIA DEL CARMEN', 'CASTILLO COLIN', 'DIRECCION ADJUNTA', 'car.castillo@bacrocorp.com', '7293230953', 'Activo', 0, 1144),
+('212', 'EDGAR ', 'BUTRON LUZ', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('213', 'BEATRIZ ', 'CABELLO BRAVO', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('215', 'JOSE ANTONIO', 'GRANADOS ARROYO', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('2150', 'JAVIER ANTONINO', 'PINEDA SOSA', 'STAFF LICITACIONES', 'javier.pineda@bacrocorp.com', '0', 'Activo', 0, 0),
+('217', 'ARTURO ', 'ROBLES NAVA', 'STAFF LICITACIONES', ' NO ASIGNADO', '7221714682', 'Activo', 0, 0),
+('219', 'ISMAEL ', 'SOTO DEL HOYO', 'GERENCIA OPERACIONES', 'ismael.soto@bacrocorp.com', '7225846945', 'Activo', 0, 1129),
+('24', 'HILDA ', 'REYES QUIROZ', 'ANALISTA DE CONTROL DE EGRESOS', 'hilda.reyes@bacrocorp.com', '7222041590', 'Activo', 0, 1132),
+('25', 'RUBEN ', 'LOPEZ DIAZ', 'STAFF LICITACIONES', 'ruben.lopez@bacrocorp.com', '722 2121756', 'Activo', 0, 0),
+('27', 'ROGELIO ', 'NAVA DE JESUS', 'INGENIERO DE SERVICIO', 'rogelio.nava@bacrocorp.com', '7225296878', 'Activo', 0, 0),
+('270', 'TOMAS IVAN', 'MUNDO GONZAGA', 'INGENIERO DE SERVICIO', 'tomas.mundo@bacrocorp.com', '0', 'Activo', 0, 0),
+('279', 'GERMAN OLIVERIO', 'VELARDE CORREA', 'STAFF LICITACIONES', ' NO ASIGNADO', '7225673361', 'Activo', 0, 0),
+('3', 'RICARDO ', 'ROSALES CAMACHO', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '7293293938', 'Activo', 0, 0),
+('303', 'BENJAMIN ', 'PEREZ CELAYA', 'TÉCNICO DE ELEVADORES', 'benjamin.perez@bacrocorp.com', '5582948825', 'Activo', 0, 0),
+('307', 'MANUEL ALEJANDRO', 'GARCIA TERAN', 'GERENCIA NUEVOS PROYECTOS', 'manuel.garcia@bacrocorp.com', '5567910269', 'Activo', 0, 1139),
+('33', 'NORMA ANGELICA', 'REYES FONSECA', 'INTENDENTE DE LIMPIEZA', 'norma.reyes@bacrocorp.com', '0', 'Activo', 0, 0),
+('34', 'qwef', 'qew', 'qef', 'qf', 'qse', 'sqd', 0, 1136),
+('345', 'EDUARDO ', 'PEREZ GARCIA', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('349', 'JOSE JAVIER', 'CRUZ VERA', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5576581592', 'Activo', 0, 0),
+('35', 'MIGUEL ANGEL', 'CRUZ BARRAGAN', 'DIRECCIÓN GENERAL', 'miguel.acb@bacrocorp.com', '7223158381', 'Activo', 0, 1144),
+('350', 'ERICK ARMANDO', 'CHAVARRIA RAMIREZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5621833132', 'Activo', 0, 0),
+('351', 'EDGAR OMAR', 'CHAVARRIA RAMIREZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('352', 'DIEGO ', 'CALLEJAS GOMEZ', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('3520', 'JUAN CARLOS', 'CAMBRONI HERNANDEZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5533335481', 'Activo', 0, 0),
+('354', 'MIGUEL ANGEL', 'RAMIREZ MALVAEZ', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('356', 'JAIME JESUS', 'ABRAHAM RAMOS', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5538179455', 'Activo', 0, 0),
+('359', 'SERGIO ADRIAN', 'VILLANUEVA ALATORRE', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '7295131483', 'Activo', 0, 0),
+('37', 'DULCE SOLEDAD', 'REBOLLAR CRUZ', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('4', 'MIGUEL ANGEL', 'GONZALEZ FLORES', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('408', 'OFELIA ', 'AGUIRRE FLORES', 'INTENDENTE DE LIMPIEZA', ' NO ASIGNADO', '7291837763', 'Activo', 0, 0),
+('41', 'ALEJANDRO ', 'CRUZ RODRIGUEZ', 'ANALISTA DE GESTIÓN', 'alejandro.cruz@bacrocorp.com', '5530540604', 'Activo', 0, 0),
+('416', 'JOSE ALVARO', 'PEREZ CELAYA', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5582948825', 'Activo', 0, 0),
+('42', 'ROSAURA ', 'VALDES SANTILLAN', 'STAFF LICITACIONES', ' NO ASIGNADO', '7225211388', 'Activo', 0, 0),
+('43', 'JOSE LUIS', 'MEDINA DE JESUS', 'ANALISTA DE ALMACEN', 'jose.medina@bacrocorp.com', '7224231466', 'Activo', 0, 1128),
+('44', 'GERARDO ', 'MEDINA AHUMADA', 'INGENIERO DE SERVICIO', 'gerardo.medina@bacrocorp.com', '0', 'Activo', 0, 0),
+('46', 'LUIS ALBERTO', 'DIONISIO ESPINOZA', 'GERENCIA LICITACIONES', 'luis.dionisio@bacrocorp.com', '7223912073', 'Activo', 0, 1135),
+('5', 'JUAN ANTONIO', 'SOTO DEL HOYO', 'ESPECIALISTA DE ELEVADORES', 'antonio.soto@bacrocorp.com', '0', 'Activo', 0, 1143),
+('500', 'JONATHAN SALVADOR', 'TELLEZ SALAZAR', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5583199548', 'Activo', 0, 0),
+('508', 'ANA VIANEY', 'PINEDA JUAREZ', 'COORDINADOR ADMINISTRATIVO DE OPERACIONES', 'ana.pineda@bacrocorp.com', '5510496327', 'Activo', 0, 1153),
+('51', 'OSVALDO SANTOS', 'MORALES JIMENEZ', 'TÉCNICO DE ELEVADORES', 'osvaldo.morales@bacrocorp.com', '5527740655', 'Activo', 0, 0),
+('536', 'LINETTE MARLENNE', 'BENITEZ VEGA', 'COORDINADOR DE CONTROL DE EGRESOS', 'l.vega@bacrocorp.com', '7293573431', 'Activo', 0, 1142),
+('538', 'BRIGIDO ', 'GAYTAN SOBERANES', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5550414381', 'Activo', 0, 0),
+('551', 'RICARDO ', 'LARIOS GEN', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5510060903', 'Activo', 0, 0),
+('560', 'LORENA ', 'IRIS PEREYRA', 'STAFF LICITACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('565', 'OSCAR DANIEL', 'BARRIOS SANCHEZ', 'ANALISTA DE SERVICIOS GENERALES', 'oscar.barrios@bacrocorp.com', '7228039246', 'Activo', 0, 1130),
+('579', 'FRANCISCO JAVIER', 'ANAYA VARGAS', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', ' ', 'Activo', 0, 0),
+('58', 'MANUEL ', 'SANCHEZ CORTES', 'INGENIERO DE SERVICIO', 'manuel.sanchez@bacrocorp.com', '0', 'Activo', 0, 0),
+('581', 'GABRIEL ', 'GARFIAS GUTIERREZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '2283414465', 'Activo', 0, 0),
+('588', 'SERGIO ', 'ALEGRIA RITO', 'GERENCIA DE ADMINISTRACIÓN', 'sergio.alegria@bacrocorp.com', '5636224386', 'Activo', 0, 1138),
+('595', 'ROSA ESPERANZA', 'BARRIOS SANCHEZ', 'ANALISTA DE SERVICIOS GENERALES', 'rosa.barrios@bacrocorp.com', '7224282615', 'Activo', 0, 1130),
+('600', 'AXEL YAIR', 'REYNAL CORTES', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5534321344', 'Activo', 0, 0),
+('6006', 'EDGAR ', 'CASTILLO VALVERDE', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5531775437', 'Activo', 0, 0),
+('601', 'RUBEN JESUS', 'PIÑA ROMERO', 'COORDINADOR DE ELEVADORES', 'ruben.pina@bacrocorp.com', '7221268898', 'Activo', 0, 1153),
+('603', 'ULISES GERMAN', 'RUIZ JIMENEZ', 'COORDINADOR DE ELECTROMECANICA', 'german.ruiz@bacrocorp.com', '7292398818', 'Activo', 0, 1153),
+('605', 'LUZ LORENA', 'GONZALEZ LAZARO', 'GERENCIA JURIDICO', 'lorena.gonzalez@bacrocorp.com', '5554522155', 'Activo', 0, 1131),
+('606', 'BEATRIZ ALEJANDRA', 'CERNA HERNANDEZ', 'ANALISTA DE LICITACIONES', 'beatriz.cerna@bacrocorp.com', '0', 'Activo', 0, 1135),
+('607', 'MISAEL ', 'VAZQUEZ GERMAN', 'ANALISTA DE CONTABILIDAD', 'misael.vazquez@bacrocorp.com', '7222615684', 'Activo', 0, 1132),
+('609', 'ROQUE ', 'LEON PEREIDA', 'GERENCIA FINANZAS', 'roque.leon@bacrocorp.com', '7221016591', 'Activo', 0, 1147),
+('611', 'MARCO ANTONIO', 'MARTINEZ PERDOMO', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5610073303', 'Activo', 0, 0),
+('618', 'JAVIER ', 'SOTO GARCIA', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '3328730737', 'Activo', 0, 0),
+('619', 'ARTURO ', 'AGUILAR SANCHEZ', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '5514907667', 'Activo', 0, 0),
+('62', 'ROSA ', 'CARMONA NAVA', 'COORDINADOR DE FACTURACIÓN', 'rosa.carmona@bacrocorp.com', '7224324212', 'Activo', 0, 1133),
+('622', 'EDSON LEONARDO', 'CASTILLO SANCHEZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('628', 'LORENZO ARMANDO', 'CARBAJAL VALENZUELA', 'ANALISTA DE GESTIÓN', 'armando.carbajal@bacrocorp.com', '7292252458', 'Activo', 0, 0),
+('632', 'LUIS MIGUEL', 'BECERRIL GARCIA', 'ANALISTA DE DIGITALIZACIÓN', 'luis.becerril@bacrocorp.com', '7293767302', 'Activo', 0, 1136),
+('634', 'ALEXIS SALVADOR', 'GARCIA PEREZ', 'COORDINADOR DE CALIDAD', 'alexis.garcia@bacrocorp.com', '7221234735', 'Activo', 0, 1156),
+('636', 'JUANA DANIELA', 'JASSO HUERTA', 'AUXILIAR ADMINISTRATIVO', 'daniela.jasso@bacrocorp.com', '7226142467', 'Activo', 0, 1145),
+('637', 'RAUL ', 'OSORIO SANCHEZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('639', 'ALEXANDER ', 'ARANA CAYETANO', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '712152704', 'Activo', 0, 0),
+('642', 'JESUS JESUS', 'REYES DE', 'ANALISTA DE CONTABILIDAD', 'jesus.reyes@bacrocorp.com', '7293251811', 'Activo', 0, 1132),
+('644', 'JESUS ENRIQUE', 'CRUZ MARTINEZ', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5518557986', 'Activo', 0, 0),
+('649', 'ISAIAS ', 'BAEZ PEREZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5531825782', 'Activo', 0, 0),
+('650', 'JOSHUA JAVIER', 'PAZ SOLIS', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5544551607', 'Activo', 0, 0),
+('651', 'IVAN ', 'SANCHEZ MENDOZA', 'ANALISTA DE LICITACIONES', 'ivan.sanchez@bacrocorp.com', '7224000506', 'Activo', 0, 1135),
+('652', 'FRANCISCO JOAQUIN', 'RAMIREZ PEREZ', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('656', 'ULISES ', 'FLORES BUSTAMANTE', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('658', 'MATEO ', 'SANCHEZ VARGAS', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('660', 'VICTOR HUGO', 'JUAREZ GUADARRAMA', 'ANALISTA DE TECNOLOGIAS DE LA INFORMACIÓN', 'victor.juarez@bacrocorp.com', '7221408783', 'Activo', 0, 1136),
+('661', 'DAVID ', 'BUSTAMANTE MOSS', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5583309771', 'Activo', 0, 0),
+('662', 'FRANCISCO ', 'VICARIO MARTINEZ', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5634000938', 'Activo', 0, 0),
+('663', 'EDUARDO GUADALUPE', 'CARDENAS GUAJARDO', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5559650362', 'Activo', 0, 0),
+('666', 'MARIA JOVITA', 'CORTES MORALES', 'INTENDENTE DE LIMPIEZA', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('668', 'VICENTE ', 'GUADARRAMA MENDOZA', 'VIGILANTE', ' NO ASIGNADO', '7224715740', 'Activo', 0, 1137),
+('669', 'JESUS ', 'LOPEZ JIMENEZ', 'TÉCNICO DE ELEVADORES', 'jesus.lopez@bacrocorp.com', '5592780053', 'Activo', 0, 0),
+('67', 'EDER ', 'NAVA REYES', 'INGENIERO DE SERVICIO', 'eder.nava@bacrocorp.com', '7224559251', 'Activo', 0, 0),
+('671', 'MARIANA CITLALI', 'HERRERA HERNANDEZ', 'ANALISTA DE CONTROL DE EGRESOS', 'mariana.herrera@bacrocorp.com', '5510498643', 'Activo', 0, 1142),
+('680', 'MARLON EMILIANO', 'GONZALEZ CAMPOS', 'BECARIO DE OPERACIONES', '0', '0', 'Activo', 0, 1143),
+('681', 'ALISON ESTEFANIA', 'HERNANDEZ HERNANDEZ', 'ANALISTA DE CONTROL DE EGRESOS', 'alison.hernandez@bacrocorp.com', '7295456616', 'Activo', 0, 1142),
+('683', 'IVAN ', 'CARDENAS GUAJARDO', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5518387394', 'Activo', 0, 0),
+('687', 'JUAN ', 'PEREZ PEREZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '8124076227', 'Activo', 0, 0),
+('689', 'JOSE MANUEL', 'YAXI NAVA', 'ANALISTA DE OPERACIONES', 'jose.yaxi@bacrocorp.com', '7226259056', 'Activo', 0, 1143),
+('69', 'LEONARDO DANIEL', 'CRUZ BARRAGAN', 'DIRECCIÓN DE FINANZAS', 'leonardo.cruz@bacrocorp.com', '7223445518', 'Activo', 0, 1144),
+('694', 'CHRISTOPHER RUBEN', 'PEREZ SANCHEZ', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5528384747', 'Activo', 0, 0),
+('698', 'ALONDRA ', 'VAZQUEZ WIDROBO', 'ANALISTA DE TALENTO HUMANO', 'alondra.vazquez@bacrocorp.com', '7297451522', 'Activo', 0, 1123),
+('699', 'OSCAR ', 'DIAZ VARGAS', 'ESPECIALISTA DE ELEVADORES', ' NO ASIGNADO', '5529203346', 'Activo', 0, 1140),
+('70', 'MIGUEL ANGEL', 'CRUZ RODRIGUEZ', 'PRESIDENCIA', 'miguel.cruzr@bacrocorp.com', '5580183808', 'Activo', 0, 1144),
+('700', 'KEVIN JOEL', 'SILVA MONTIEL', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5614959671', 'Activo', 0, 0),
+('701', 'VICTOR MANUEL', 'CABELLO MEDRANO', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '8117847699', 'Activo', 0, 0),
+('705', 'OSCAR ', 'ARIZMENDI JAIMES', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '7444545374', 'Activo', 0, 0),
+('706', 'ABEL ', 'MACIAS HERNANDEZ', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '7297418337', 'Activo', 0, 0),
+('707', 'MARCO ANTONIO', 'MARTINEZ MENDEZ', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '55 4031 6796', 'Activo', 0, 0),
+('708', 'TOMAS ANTONIO', 'SALAS VENTURA', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '55 8336 3653', 'Activo', 0, 0),
+('71', 'JORGE ', 'VALDES HERNANDEZ', 'INGENIERO DE SERVICIO', 'jorge.valdes@bacrocorp.com', '0', 'Activo', 0, 0),
+('710', 'LUIS ENRIQUE', 'MEDINA REYES', 'ANALISTA DE PARQUE VEHICULAR', 'enrique.medina@bacrocorp.com', '7221337681', 'Activo', 0, 1134),
+('711', 'JULIO CESAR', 'BECERRIL REYES', 'GERENCIA P.M.O.', 'julio.becerril@bacrocorp.com', '7222666024', 'Activo', 0, 1139),
+('712', 'LUIS ANTONIO', 'ROMERO LOPEZ', 'DESARROLLADOR DE TECNOLOGIAS DE LA INFORMACION', 'luis.romero@bacrocorp.com', '7222248786', 'Activo', 0, 1136),
+('714', 'FERNANDO ANTONIO', 'BRITO SAUCEDO', 'ANALISTA DE PRECIOS UNITARIOS', 'fernando.brito@bacrocorp.com', '7224194823', 'Activo', 0, 1143),
+('717', 'ERICK JERSON', 'MONTOYA CASTILLO', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5534063023', 'Activo', 0, 0),
+('718', 'AMELIA ', 'NOGUERON CAZARES', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5522127802', 'Activo', 0, 0),
+('720', 'ALAN ', 'VILLAGRAN ORTIZ', 'ANALISTA DE COMPRAS', 'alan.villagran@bacrocorp.com', '7293235822', 'Activo', 0, 1152),
+('722', 'JOSE MANUEL', 'ZAMORA ROSAS', 'COCINERO', ' NO ASIGNADO', '5617644478', 'Activo', 0, 0),
+('723', 'AGUSTIN ', 'MAYA ESCAMILLA', 'RESIDENTE DE OBRA', 'agustin.maya@bacrocorp.com', '7293282621', 'Activo', 0, 1143),
+('728', 'ABEL ', 'HERNANDEZ RUIZ', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '5529434327', 'Activo', 0, 0),
+('730', 'ANA MARIA', 'ARRIAGA GÓMEZ', 'ANALISTA DE NOMINA', 'ana.arriaga@bacrocorp.com', '7221473021', 'Activo', 0, 1132),
+('732', 'BALBINO ARTURO', 'SOLIS ZARAGOZA', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '7226153932', 'Activo', 0, 0),
+('733', 'JUAN ALBERTO', 'SANTOS EUTIMIO', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '5587320464', 'Activo', 0, 0),
+('734', 'NELCHI ZENTLLASEN', 'BENITEZ SANCHEZ', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '553516054', 'Activo', 0, 0),
+('735', 'ALEJANDRO ', 'MORALES JIMENEZ', 'BECARIO DE OPERACIONES', '0', '0', 'Activo', 0, 1143),
+('736', 'AIDA YAMILETH', 'ARIZMENDI GOMEZ', 'BECARIO DE OPERACIONES', '0', '0', 'Activo', 0, 1143),
+('737', 'JOSE ALEJANDRO', 'OROZCO FABELA', 'BECARIO DE OPERACIONES', '0', '0', 'Activo', 0, 1143),
+('738', 'BRISA ', 'ANTONIO COLIN', 'BECARIO FACTURACION', 'brisa.antonio@bacrocorp.com', '7226501822', 'Activo', 0, 1133),
+('739', 'CESAR ADRIAN', 'SOLIS FONSECA', 'AUXILIAR TÉCNICO', ' NO ASIGNADO', '5611746797', 'Activo', 0, 0),
+('740', 'MARIO ALBERTO', 'HURTADO CERVANTES', 'ESPECIALISTA DE RED FRIA', ' NO ASIGNADO', '5531392909', 'Activo', 0, 1145),
+('741', 'ERIC ALBERTO', 'GARCIA PALENCIA', 'RESIDENTE DE OBRA', 'eric.garcia@bacrocorp.com', '7226822726', 'Activo', 0, 1143),
+('742', 'RODRIGO ', 'MORALES ACEVEDO', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '5557286161', 'Activo', 0, 0),
+('743', 'ADRIAN ', 'FABILA MARIANO', 'BECARIO DE CONTABILIDAD', 'adrian.fabila@bacrocorp.com', '7225694710', 'Activo', 0, 1132),
+('744', 'RIGOBERTO ', 'DURAZO VILLAESCUSA', 'INGENIERO DE SERVICIO - BIOMEDICO', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('745', 'HERIBERTO ENRIQUE', 'MENDOZA GARCIA', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '5545663594', 'Activo', 0, 0),
+('746', 'CESAR LUIS', 'RODRIGUEZ MARTINEZ', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '7228269210', 'Activo', 0, 0),
+('749', 'DAVID ', 'GARCIA REZA', 'INGENIERO DE SERVICIO', ' NO ASIGNADO', '7211120330', 'Activo', 0, 0),
+('75', 'YOVANNI HERIBERTO', 'RAMIREZ MEJIA', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5531050569', 'Activo', 0, 0),
+('750', 'DANIEL ', 'CASANOVA MARTINEZ', 'GENERALISTA DE OPERACIONES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('751', 'VICTOR FERNANDO', 'BERNAL VALENCIA', 'ANALISTA DE OPERACIONES', 'victor.bernal@bacrocorp.com', '7291621685', 'Activo', 0, 1143),
+('752', 'CESAR DANIEL', 'SANCHEZ SANCHEZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('753', 'CESAR ', 'CURIEL LEYVA', 'ANALISTA DE OPERACIONES', 'cesar.curiel@bacrocorp.com', '0', 'Activo', 0, 1143),
+('754', 'CINTHYA BERENICE', 'ROJAS COLIN', 'GERENCIA TALENTO HUMANO', 'berenice.rojas@bacrocorp.com', '9211921725', 'Activo', 0, 1125),
+('755', 'GERMAN GUILLERMO', 'ARRATIA MURGUIA', 'COORDINADOR DE TALENTO HUMANO', 'german.arratia@bacrocorp.com', '7225560252', 'Activo', 0, 1125),
+('756', 'EDUARDO ', 'COYOTE CORRAL', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '7228646032', 'Activo', 0, 0),
+('757', 'ELIAS JOSAFAD', 'MENA LOPEZ', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '55688845613', 'Activo', 0, 0),
+('758', 'ROSA ELENA', 'CABALLERO LUNA', 'RESIDENTE DE OBRA', 'rosa.caballero@bacrocorp.com', '7228058685', 'Activo', 0, 1143),
+('759', 'JOSE TEÓDULO', 'GARCIA GARCIA', 'ANALISTA DE COMPRAS', ' NO ASIGNADO', '7222519393', 'Activo', 0, 1152),
+('760', 'LILIAN ', 'ESQUIVEL MARTINEZ', 'AUXILIAR ADMINISTRATIVO', ' NO ASIGNADO', '5583464262', 'Activo', 0, 1143),
+('761', 'GUSTAVO ', 'SOLIS OLALDE', 'TÉCNICO DE ELEVADORES', ' NO ASIGNADO', '5553345131', 'Activo', 0, 0),
+('762', 'ANDRES ', 'MONREAL HERNANDEZ', 'INGENIERO DE SERVICIO - BIOMEDICO', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('763', 'COLIN GARCIA', 'RUBEN ALEJANDRO', 'ANALISTA DE CONTABILIDAD', 'ruben.garcia@bacrocorp.com', '7222212092', 'Activo', 0, 1132),
+('766', 'LUCELY ALEJANDRA', 'ACOLTZI RAMIREZ', '0', '0', '0', 'Activo', 0, 1156),
+('767', 'YARA PAULINA', 'ALARCON MOTA', '0', '0', '0', 'Activo', 0, 0),
+('77', 'ROJER MILTON', 'PEREZ MIRANDA', 'ANALISTA DE OPERACIONES', 'rojer.perez@bacrocorp.com', '7228648019', 'Activo', 0, 1143),
+('8', 'LEONARDO EDWIN', 'MARTINEZ HERNANDEZ', 'INGENIERO DE SERVICIO', 'leonardo.martinez@bacrocorp.com', '0', 'Activo', 0, 0),
+('80', 'ENRIQUE ', 'MEDINA DE JESUS', 'CONDUCTOR PARTICULAR', ' NO ASIGNADO', '0', 'Activo', 0, 0),
+('85', 'JOSUE ABIGAIL', 'AGAPITO CORRAL', 'TÉCNICO DE ELEVADORES', 'josue.agapito@bacrocorp.com', '7222495684', 'Activo', 0, 0),
+('87', 'REBECA ', 'GONZALEZ AVILES', 'COORDINADOR DE LICITACIONES', 'rebeca.gonzalez@bacrocorp.com', '722 6730364', 'Activo', 0, 1135);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `empleados`
+--
+ALTER TABLE `empleados`
+  ADD PRIMARY KEY (`codigo`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
